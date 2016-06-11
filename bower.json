@@ -1,6 +1,6 @@
 {
   "name": "fx-arrows",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A super sweet custom element arrow animation built w/ Polymer (web components).",
   "authors": [
     "Justin O'Neill <justin@oneezy.com>"
