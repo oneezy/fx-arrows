@@ -1,6 +1,6 @@
 # \<fx-arrows\>
 
-A arrowsed div custom element built w/ Polymer.
+A custom element arrow animation built w/ Polymer.
 
 ## Install the Polymer-CLI
 
