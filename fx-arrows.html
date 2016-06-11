@@ -1,0 +1,134 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="fx-icons.html">
+
+<dom-module id="fx-arrows">
+    <template>
+        <style>
+
+            /* FX Arrows */
+            :host {
+                display: inline-block;
+                box-sizing: border-box;
+                position: relative;
+                text-align: center;
+                color: black;
+            }
+
+            /* Colors */
+            :host([color="black"])     { color: rgba(0,0,0,       1); }
+            :host([color="white"])     { color: rgba(255,255,255, 1); }
+            :host([color="red"])       { color: rgba(240,98,146,  1); }
+            :host([color="blue"])      { color: rgba(100,181,246, 1); }
+            :host([color="purple"])    { color: rgba(123,31,162,  1); }
+            :host([color="yellow"])    { color: rgba(246,255,40,  1); }
+            :host([color="green"])     { color: rgba(0,230,118,   1); }
+            :host([color="gray"])      { color: rgba(70,70,70,    1); }
+
+
+            /* Arrow Styles */
+            div { display: inline-flex; flex-direction: column; justify-content: center; align-items: center; }
+            iron-icon { display: inline-block; width: 60px; height: 60px; color: inherit; }
+            iron-icon:nth-child(1) { transform: translate(0, 0); animation: arrow1 1.75s infinite; }
+            iron-icon:nth-child(2) { transform: translate(0, -70%); animation: arrow2 1.75s infinite; }
+            iron-icon:nth-child(3) { transform: translate(0, -140%); animation: arrow3 1.75s infinite; }
+
+
+            /* Spacing */
+            :host([spacing="1"]) > div > iron-icon:nth-child(2) { transform: translate(0, -70%); }
+            :host([spacing="1"]) > div > iron-icon:nth-child(3) { transform: translate(0, -140%); }
+            :host([spacing="2"]) > div > iron-icon:nth-child(2) { transform: translate(0, -60%); }
+            :host([spacing="2"]) > div > iron-icon:nth-child(3) { transform: translate(0, -120%); }
+            :host([spacing="3"]) > div > iron-icon:nth-child(2) { transform: translate(0, -50%); }
+            :host([spacing="3"]) > div > iron-icon:nth-child(3) { transform: translate(0, -100%); }
+
+            /* Display */
+            :host([display="1"]) > div > iron-icon:nth-child(1) { display: inline-block; }
+            :host([display="1"]) > div > iron-icon:nth-child(2) { display: none; }
+            :host([display="1"]) > div > iron-icon:nth-child(3) { display: none; }
+            :host([display="2"]) > div > iron-icon:nth-child(1) { display: inline-block; }
+            :host([display="2"]) > div > iron-icon:nth-child(2) { display: inline-block; }
+            :host([display="2"]) > div > iron-icon:nth-child(3) { display: none; }
+            :host([display="3"]) > div > iron-icon:nth-child(1) { display: inline-block; }
+            :host([display="3"]) > div > iron-icon:nth-child(2) { display: inline-block; }
+            :host([display="3"]) > div > iron-icon:nth-child(3) { display: inline-block; }
+
+
+            /* Direction */
+            :host([direction="up"]) > div     { transform: rotate(180deg); }
+            :host([direction="down"]) > div   { transform: rotate(0); }
+            :host([direction="left"]) > div   { transform: rotate(90deg); }
+            :host([direction="right"]) > div  { transform: rotate(270deg); }
+
+
+            /* Size */
+            :host([size="1"]) > * { transform: scale(1,1); }
+            :host([size="2"]) > * { transform: scale(2,2); }
+            :host([size="3"]) > * { transform: scale(3,3); }
+
+
+            /* Animation */
+            @keyframes arrow1 {
+                0%       {opacity: 0;}
+                5%       {opacity: 1;}     /* <-- Start @5% */
+                15%      {opacity: 1;}
+                20%      {opacity: 1;}
+                50%      {opacity: 1;}
+                100%     {opacity: 0;}
+            }
+
+            @keyframes arrow2 {
+                0%       {opacity: 0;}
+                5%       {opacity: 0;}
+                15%      {opacity: 1;}     /* <-- Start @15% */
+                20%      {opacity: 1;}
+                50%      {opacity: 1;}
+                100%     {opacity: 0;}
+            }
+
+            @keyframes arrow3 {
+                0%       {opacity: 0;}
+                5%       {opacity: 0;}
+                15%      {opacity: 0;}
+                20%      {opacity: 1;}     /* <-- Start @20% */
+                50%      {opacity: 1;}
+                100%     {opacity: 0;}
+            }
+        </style>
+            <div>
+                <iron-icon icon="fx-icons:arrow-down" class="arrow-down arrow1"></iron-icon>
+                <iron-icon icon="fx-icons:arrow-down" class="arrow-down arrow2"></iron-icon>
+                <iron-icon icon="fx-icons:arrow-down" class="arrow-down arrow3"></iron-icon>
+            </div>
+    </template>
+
+    <script>
+        Polymer({
+
+        is: 'fx-arrows',
+
+            properties: {
+                color: {
+                    type: String,
+                    value: 'black',
+                },
+                display: {
+                    type: String,
+                    value: '3',
+                },
+                spacing: {
+                    type: String,
+                    value: '1',
+                },
+                direction: {
+                    type: String,
+                    value: 'down',
+                },
+                size: {
+                    type: String,
+                    value: '1',
+                },
+        },
+
+        });
+    </script>
+</dom-module>

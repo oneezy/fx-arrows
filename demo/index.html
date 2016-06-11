@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>fx-arrows demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../fx-arrows.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+        fx-arrows {  }
+        demo-snippet { text-align: center; }
+        .code { text-align: left; }
+        .size { padding-top: 6rem; }
+        .size fx-arrows { margin: 0 1rem; }
+
+        .direction          { position: relative; padding-top: 150px; }
+        [direction="up"]    { position: absolute; top: 0; left: calc(50% - 35px); }
+        [direction="down"]  { position: absolute; top: 0; left: calc(50% - 35px); }
+        [direction="left"]  { position: absolute; top: 0; left: calc(50% - 35px); }
+        [direction="right"] { position: absolute; top: 0; left: calc(50% - 35px); }
+    </style>
+  </head>
+<body unresolved>
+
+    <div class="vertical-section-container centered">
+        <h3>FX arrows (demo)</h3>
+        <p>FX arrows is an arrow animation mainly used for "hero" background images showing that the user should scroll down the page. By default the arrows are black, or you can set the color property.</p>
+
+        <!-- Default -->
+        <h4>Default</h4>
+        <demo-snippet>
+            <template>
+                <fx-arrows></fx-arrows>
+            </template>
+        </demo-snippet>
+
+        <!-- Colors -->
+        <h4>Color</h4>
+        <demo-snippet>
+            <template>
+                <fx-arrows color="blue"></fx-arrows>
+                <fx-arrows color="yellow"></fx-arrows>
+                <fx-arrows color="green"></fx-arrows>
+                <fx-arrows color="red"></fx-arrows>
+                <fx-arrows color="purple"></fx-arrows>
+            </template>
+        </demo-snippet>
+
+        <!-- Display -->
+        <h4>Display</h4>
+        <demo-snippet>
+            <template>
+                <fx-arrows display="1"></fx-arrows>
+                <fx-arrows display="2"></fx-arrows>
+                <fx-arrows display="3"></fx-arrows>
+            </template>
+        </demo-snippet>
+
+        <!-- Spacing -->
+        <h4>Spacing</h4>
+        <demo-snippet>
+            <template>
+                <fx-arrows spacing="1"></fx-arrows>
+                <fx-arrows spacing="2"></fx-arrows>
+                <fx-arrows spacing="3"></fx-arrows>
+            </template>
+        </demo-snippet>
+
+        <!-- Direction -->
+        <h4>Direction</h4>
+        <demo-snippet class="direction">
+            <template>
+            <fx-arrows direction="down"></fx-arrows>
+                <fx-arrows direction="up"></fx-arrows>
+                <fx-arrows direction="left"></fx-arrows>
+                <fx-arrows direction="right"></fx-arrows>
+            </template>
+        </demo-snippet>
+
+        <!-- Size -->
+        <h4>Size</h4>
+        <demo-snippet class="size">
+            <template>
+                <fx-arrows size="1"></fx-arrows>
+                <fx-arrows size="2"></fx-arrows>
+                <fx-arrows size="3"></fx-arrows>
+            </template>
+        </demo-snippet>
+    </div>
+
+</body>
+</html>
