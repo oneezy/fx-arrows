@@ -1,8 +1,8 @@
-_[Demo and API Docs](https://oneezy.github.io/sweet-element)_
+_[Demo and API Docs](https://oneezy.github.io/fx-arrows)_
 
 # \<fx-arrows\>
 
-[![Build Status](https://travis-ci.org/oneezy/sweet-element.svg?branch=master)](https://travis-ci.org/oneezy/sweet-element)
+[![Build Status](https://travis-ci.org/oneezy/fx-arrows.svg?branch=master)](https://travis-ci.org/oneezy/fx-arrows)
 
 A custom element arrow animation built w/ Polymer.
 
