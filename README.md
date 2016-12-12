@@ -1,6 +1,14 @@
+_[Demo and API Docs](https://oneezy.github.io/sweet-element)_
+
 # \<fx-arrows\>
 
+[![Build Status](https://travis-ci.org/oneezy/sweet-element.svg?branch=master)](https://travis-ci.org/oneezy/sweet-element)
+
 A custom element arrow animation built w/ Polymer.
+
+```
+$ bower install oneezy/fx-arrows
+```
 
 ## Install the Polymer-CLI
 
